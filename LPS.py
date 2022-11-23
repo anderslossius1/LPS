@@ -9,7 +9,9 @@ Created on Sun Nov 20 17:47:06 2022
 
 import time
 
+
 def takeinput(): return input("Type here: ")
+
 
 def playLPS(numSec):
     time.sleep(0.5)
@@ -22,20 +24,20 @@ def playLPS(numSec):
     print('Set...\n')
     time.sleep(1)
     print('GO !! \n\n')
-    t_end = time.time() + numSec
+    startTime = time.time()
     lps = 0
-    while time.time() < t_end:
-        t = takeinput()
-        if t == 'lug':
-            lps += 1 
+    IN = takeinput()
+    endTime = time.time()
+    lugs = 0
+    # pase data and count number of valid strings "lug "
+    for i in range(len(IN)-3):
+        if IN[i:i+4] == 'lug ':
+            lugs += 1
+    lps = lugs/(endTime-startTime)
     output = "Your LPS is: " + str(lps/numSec)
     print(lps, numSec)
 
     return output
 
 
-
-
-
-
-
+playLPS(1000)
