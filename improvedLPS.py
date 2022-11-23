@@ -98,5 +98,4 @@ with KeyPoller() as keyPoller:
     lps = lugs/(int(length))
     output = "Your LPS is: " + str(lps) + "\nTotal lugs: " + str(lugs)
     # clear the screen
-    print("\033[2J")
     print(output)
