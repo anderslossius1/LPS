@@ -1,6 +1,6 @@
 import time
 global isWindows
-isWindows = false
+isWindows = False
 try:
     from win32api import STD_INPUT_HANDLE
     from win32console import GetStdHandle, KEY_EVENT, ENABLE_ECHO_INPUT, ENABLE_LINE_INPUT, ENABLE_PROCESSED_INPUT
