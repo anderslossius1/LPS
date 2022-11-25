@@ -96,6 +96,6 @@ with KeyPoller() as keyPoller:
         if inStr[i:i+4] == 'lug ':
             lugs += 1
     lps = lugs/(int(length))
-    output = "Your LPS is: " + str(lps) + "\nTotal lugs: " + str(lugs)
+    output = "\nYour LPS is: " + str(lps) + "\nTotal lugs: " + str(lugs)
     # clear the screen
     print(output)
